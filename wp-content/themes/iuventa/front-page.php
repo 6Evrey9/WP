@@ -16,9 +16,11 @@ get_header();
 	get_template_part( 'template-parts/results' );
 	get_template_part( 'template-parts/doctors' );
 	get_template_part( 'template-parts/reviews' );
+	get_template_part( 'template-parts/video-reviews' );
 	get_template_part( 'template-parts/news' );
 	get_template_part( 'template-parts/faq' );
 	get_template_part( 'template-parts/contact' );
+	get_template_part( 'template-parts/address' );
 	?>
 </main>
 <?php

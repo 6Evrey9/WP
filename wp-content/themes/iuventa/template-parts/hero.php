@@ -34,7 +34,7 @@ $benefits = iuventa_hero_benefits();
 		</div>
 
 		<div class="hero-media">
-			<img src="<?php echo esc_url( iuventa_img( 'hero-portrait.png' ) ); ?>" alt="Косметология Ювента в Самаре" loading="eager">
+			<img src="<?php echo esc_url( iuventa_img( 'hero-team.png' ) ); ?>" alt="Косметологи клиники Ювента в Самаре" loading="eager">
 			<div class="hero-badge">
 				<span class="hero-badge-rating">★ <?php echo esc_html( $info['rating'] ); ?></span>
 				<span class="hero-badge-text"><?php echo esc_html( $info['reviews_count'] ); ?> отзыва на Яндексе</span>

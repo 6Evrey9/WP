@@ -15,16 +15,16 @@ $tasks = iuventa_tasks();
 		<div class="tasks-grid">
 			<?php foreach ( $tasks as $task ) : ?>
 				<article class="task-card">
-					<div class="task-card-media">
-						<img src="<?php echo esc_url( iuventa_img( $task['img'] ) ); ?>" alt="<?php echo esc_attr( $task['title'] ); ?>" loading="lazy">
+					<div class="task-card-body">
+						<h3><?php echo esc_html( $task['title'] ); ?></h3>
+						<p class="task-desc"><?php echo esc_html( $task['desc'] ); ?></p>
+						<span class="task-tag">→ <?php echo esc_html( $task['tag'] ); ?></span>
 						<span class="task-price"><?php echo esc_html( $task['price'] ); ?></span>
 					</div>
-					<div class="task-card-body">
-						<span class="task-tag">→ <?php echo esc_html( $task['tag'] ); ?></span>
-						<h3><?php echo esc_html( $task['title'] ); ?></h3>
-						<p><?php echo esc_html( $task['desc'] ); ?></p>
-						<a class="task-link" href="#contact">Записаться</a>
+					<div class="task-card-media">
+						<img src="<?php echo esc_url( iuventa_img( $task['img'] ) ); ?>" alt="<?php echo esc_attr( $task['title'] ); ?>" loading="lazy">
 					</div>
+					<a class="task-overlay-link" href="#contact" aria-label="<?php echo esc_attr( $task['title'] ); ?>"></a>
 				</article>
 			<?php endforeach; ?>
 		</div>

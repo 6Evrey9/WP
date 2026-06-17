@@ -17,7 +17,6 @@ $results = iuventa_results();
 				<figure class="result-card">
 					<div class="result-media">
 						<img src="<?php echo esc_url( iuventa_img( $r['img'] ) ); ?>" alt="<?php echo esc_attr( $r['title'] ); ?>" loading="lazy">
-						<span class="result-tag">До / После</span>
 					</div>
 					<figcaption>
 						<h3><?php echo esc_html( $r['title'] ); ?></h3>

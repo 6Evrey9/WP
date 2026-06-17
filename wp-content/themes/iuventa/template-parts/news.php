@@ -14,16 +14,16 @@ $news = iuventa_news();
 		<div class="news-grid">
 			<?php foreach ( $news as $n ) : ?>
 				<article class="news-card">
-					<div class="news-media">
+					<a class="news-media" href="#contact">
 						<img src="<?php echo esc_url( iuventa_img( $n['img'] ) ); ?>" alt="<?php echo esc_attr( $n['title'] ); ?>" loading="lazy">
-					</div>
-					<div class="news-body">
-						<span class="news-tag">Новости клиники</span>
-						<h3><?php echo esc_html( $n['title'] ); ?></h3>
-						<a class="news-link" href="#contact">Читать</a>
-					</div>
+					</a>
+					<h3 class="news-title"><a href="#contact"><?php echo esc_html( $n['title'] ); ?></a></h3>
 				</article>
 			<?php endforeach; ?>
+		</div>
+
+		<div class="news-more">
+			<a class="btn btn-dark btn-pill" href="#contact">Показать ещё</a>
 		</div>
 	</div>
 </section>

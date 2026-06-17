@@ -11,13 +11,18 @@ $reviews = iuventa_reviews();
 <section class="section reviews" id="reviews">
 	<div class="container">
 		<h2 class="section-title">Отзывы о клинике косметологии Ювента в Самаре</h2>
+		<p class="section-sub">Реальные отзывы клиентов о косметологии Ювента в Самаре. Пациенты делятся результатами процедур: лечение акне, чистка лица, RF-лифтинг и омоложение кожи.</p>
 
 		<div class="reviews-rating">
-			<div class="rating-stars">★★★★★</div>
-			<div class="rating-meta">
-				<strong><?php echo esc_html( $info['rating'] ); ?> / 5</strong>
-				<span>Оценка клиники на Яндексе (<?php echo esc_html( $info['reviews_count'] ); ?> отзыва)</span>
+			<div class="rating-left">
+				<span class="rating-label">ОЦЕНКА КОСМЕТОЛОГИЯ ЮВЕНТА В <span class="ya">Я</span>ндекс</span>
+				<span class="rating-line">
+					<span class="rating-stars">★★★★★</span>
+					<strong><?php echo esc_html( $info['rating'] ); ?> / 5</strong>
+					<span class="muted">(<?php echo esc_html( $info['reviews_count'] ); ?> отзыва)</span>
+				</span>
 			</div>
+			<a class="btn btn-primary btn-sm" href="#contact">Оставить отзыв</a>
 		</div>
 
 		<div class="reviews-grid">
