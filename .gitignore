@@ -11,6 +11,9 @@
 # Third-party plugins (installed by bin/setup.sh)
 /wp-content/plugins/sqlite-database-integration/
 
+# Build output (hosting package produced by bin/build-dist.sh)
+/dist/
+
 # Logs & OS junk
 /wp-content/debug.log
 *.log
