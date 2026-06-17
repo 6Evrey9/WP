@@ -1,0 +1,21 @@
+# WordPress core (downloaded by bin/setup.sh)
+/wp/
+
+# Generated WordPress config & SQLite drop-in (created by bin/setup.sh)
+/wp-config.php
+/wp-content/db.php
+/wp-content/database/
+/wp-content/upgrade/
+/wp-content/uploads/
+
+# Third-party plugins (installed by bin/setup.sh)
+/wp-content/plugins/sqlite-database-integration/
+
+# Build output (hosting package produced by bin/build-dist.sh)
+/dist/
+
+# Logs & OS junk
+/wp-content/debug.log
+*.log
+.DS_Store
+Thumbs.db
