@@ -11,9 +11,9 @@ $benefits = iuventa_hero_benefits();
 <section class="hero" id="top">
 	<div class="container hero-inner">
 		<div class="hero-content">
-			<p class="hero-eyebrow">Клиника косметологии Ювента | IUVENTA в Самаре</p>
-			<h1 class="hero-title">Уберём морщины и подтянем овал лица за&nbsp;1–5&nbsp;процедур</h1>
-			<p class="hero-lead">Работаем по методам доказательной медицины. 3000+ клиентов и рейтинг <?php echo esc_html( $info['rating'] ); ?> на Яндексе <span class="star">★</span></p>
+			<p class="hero-eyebrow"><?php echo esc_html( iuventa_opt( 'hero_eyebrow', iuventa_default( 'hero_eyebrow' ) ) ); ?></p>
+			<h1 class="hero-title"><?php echo esc_html( iuventa_opt( 'hero_title', iuventa_default( 'hero_title' ) ) ); ?></h1>
+			<p class="hero-lead"><?php echo esc_html( iuventa_opt( 'hero_lead', iuventa_default( 'hero_lead' ) ) ); ?> <span class="star">★</span></p>
 
 			<ul class="hero-benefits">
 				<?php foreach ( $benefits as $b ) : ?>
@@ -30,7 +30,7 @@ $benefits = iuventa_hero_benefits();
 				<a class="btn btn-primary btn-lg" href="#contact">Записаться на консультацию</a>
 				<a class="btn btn-outline btn-lg" href="tel:<?php echo esc_attr( $info['phone_raw'] ); ?>">Позвонить</a>
 			</div>
-			<p class="hero-note">Свяжемся в течение 15 минут • Ваши данные никому не передаются!</p>
+			<p class="hero-note"><?php echo esc_html( iuventa_opt( 'hero_note', iuventa_default( 'hero_note' ) ) ); ?></p>
 		</div>
 
 		<div class="hero-media">

@@ -11,8 +11,8 @@ $status = isset( $_GET['lead'] ) ? sanitize_key( $_GET['lead'] ) : '';
 <section class="section contact" id="contact">
 	<div class="container contact-inner">
 		<div class="contact-copy">
-			<h2 class="section-title section-title--light">Запишитесь на визит или задайте вопрос косметологу</h2>
-			<p>Оценим состояние кожи, подберём процедуры и рассчитаем стоимость. Перезвоним через 15 минут.</p>
+			<h2 class="section-title section-title--light"><?php echo esc_html( iuventa_opt( 'contact_title', iuventa_default( 'contact_title' ) ) ); ?></h2>
+			<p><?php echo esc_html( iuventa_opt( 'contact_text', iuventa_default( 'contact_text' ) ) ); ?></p>
 
 			<ul class="contact-list">
 				<li><span class="contact-ico">☎</span> <a href="tel:<?php echo esc_attr( $info['phone_raw'] ); ?>"><?php echo esc_html( $info['phone'] ); ?></a></li>

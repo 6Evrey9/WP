@@ -13,15 +13,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function iuventa_clinic_info() {
+	$opt = function_exists( 'iuventa_opt' ) ? 'iuventa_opt' : null;
 	return array(
-		'name'      => 'IUVENTA',
-		'name_ru'   => 'Ювента',
-		'phone'     => '+7 917 106 33 22',
-		'phone_raw' => '+79171063322',
-		'address'   => 'Самара, проспект Ленина 2А',
-		'address_note' => 'вход справа от 4 подъезда',
-		'rating'    => '5.0',
-		'reviews_count' => '273',
+		'name'         => 'IUVENTA',
+		'name_ru'      => 'Ювента',
+		'phone'        => $opt ? iuventa_opt( 'phone', '+7 917 106 33 22' ) : '+7 917 106 33 22',
+		'phone_raw'    => $opt ? iuventa_opt( 'phone_raw', '+79171063322' ) : '+79171063322',
+		'address'      => $opt ? iuventa_opt( 'address', 'Самара, проспект Ленина 2А' ) : 'Самара, проспект Ленина 2А',
+		'address_note' => $opt ? iuventa_opt( 'address_note', 'вход справа от 4 подъезда' ) : 'вход справа от 4 подъезда',
+		'rating'       => $opt ? iuventa_opt( 'rating', '5.0' ) : '5.0',
+		'reviews_count'=> $opt ? iuventa_opt( 'reviews_count', '273' ) : '273',
 	);
 }
 

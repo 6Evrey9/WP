@@ -128,4 +128,9 @@ $WP theme activate iuventa
 $WP rewrite structure '/%postname%/' >/dev/null
 $WP option update blogname "Ювента — клиника косметологии в Самаре" >/dev/null
 
+# Seed editable content (procedures + cosmetologists) and flush permalinks.
+# Idempotent: seeding is guarded by the 'iuventa_seeded' option.
+$WP eval 'iuventa_register_cpts(); iuventa_seed_content();' >/dev/null 2>&1 || true
+$WP rewrite flush --hard >/dev/null 2>&1 || true
+
 echo "==> Done. Start the site with: bin/serve.sh  (http://localhost:8080)"
